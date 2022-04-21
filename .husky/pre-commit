@@ -4,6 +4,5 @@
 echo \[🐶 Husky] Running pre-commit hook...\
 
 yarn husky:pre-commit
-# npx lint-staged
 
 echo \[🐶 Husky] Done ✅ pre-commit hook...\
