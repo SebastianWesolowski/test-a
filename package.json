@@ -30,9 +30,9 @@
     "analize": "cross-env ANALYZE=true npm run build",
     "typecheck": "tsc --noEmit --incremental false",
     "postbuild": "next-sitemap",
-    "test": "jest watchAll--maxWorkers=25%",
+    "test": "jest --maxWorkers=25%",
     "test:ci": "jest --ci",
-    "test:watch": "jest --maxWorkers=25%",
+    "test:watch": "jest",
     "test:coverage": "run-s \"test -- --coverage\" test:clear",
     "test:clear": "rimraf ./reports/coverage && mv coverage ./reports/",
     "test:update": "jest --updateSnapshot",
@@ -54,7 +54,8 @@
     "react-cool-dimensions": "^2.0.7",
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "tailwind-merge": "^1.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
