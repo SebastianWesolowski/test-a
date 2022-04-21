@@ -14,7 +14,7 @@
     "style:check:strict": "cross-env NODE_ENV=strictRules npm run style:check --",
     "style:fix": "run-s \"style:check -- --fix\"",
     "format": "npm run format:check -- --write",
-    "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --json-recursive-sort",
+    "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|jsongit)\" --ignore-unknown --json-recursive-sort",
     "format:check:staged": "prettier --check --ignore-unknown --json-recursive-sort",
     "dev": "run-s copy:assets next:dev",
     "start": "run-s build:prod next:start",

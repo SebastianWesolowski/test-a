@@ -1,7 +1,7 @@
 module.exports = {
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
-  list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf', 'breaking', 'config'],
+  list: ['test', 'feat', 'fix', 'chore', 'clean', 'docs', 'refactor', 'style', 'ci', 'perf', 'breaking', 'config'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
@@ -16,6 +16,11 @@ module.exports = {
       description: 'CI related changes',
       emoji: '🎡',
       value: 'ci',
+    },
+    clean: {
+      description: 'Sorting or cleaning out the code',
+      emoji: '🧹',
+      value: 'clean',
     },
     docs: {
       description: 'Documentation only changes',

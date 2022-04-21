@@ -10,6 +10,7 @@ module.exports = {
         'test',
         'feat',
         'fix',
+        'clean',
         'chore',
         'docs',
         'refactor',
