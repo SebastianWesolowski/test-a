@@ -33,3 +33,7 @@ local
 
 # vercel
 .vercel
+
+# next-sitemap
+robots.txt
+sitemap.xml

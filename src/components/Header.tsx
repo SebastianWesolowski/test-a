@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 
 import MinimalLogo from '@/assets/svg/MinimalLogo';
+import config from '@/config/config';
 import { StyleContext } from '@/context/contextType/StyleContext';
-import config from '@/utils/config';
 
 const Header = (): JSX.Element => {
   const { space } = useContext(StyleContext);

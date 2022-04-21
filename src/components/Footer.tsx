@@ -1,4 +1,5 @@
-import config, { ISocialMedia } from '@/utils/config';
+import config from '@/config/config';
+import { ISocialMedia } from '@/config/type';
 
 const Footer = (): JSX.Element => {
   return (

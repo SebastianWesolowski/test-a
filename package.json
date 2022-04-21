@@ -15,6 +15,7 @@
     "copy:assets": "copyfiles -u 1 \"./src/assets/**/*.+(png|svg|jpg|jpeg|webp|mp4|pdf|ico)\" public",
     "analize": "cross-env ANALYZE=true npm run build",
     "build-types": "tsc --noEmit --pretty",
+    "postbuild": "next-sitemap",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -26,13 +27,16 @@
     "react-cool-dimensions": "^2.0.7",
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "tailwindcss": "^3.0.23",
+    "@tailwindcss/forms": "^0.5.0"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.4",
     "@types/lodash": "^4.14.182",
     "@types/node": "^17.0.23",
     "@types/react": "^17.0.44",
+    "@types/tailwindcss": "^3.0.10",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.18.0",
     "autoprefixer": "^10.4.4",
@@ -53,11 +57,11 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
+    "next-sitemap": "^2.5.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",
     "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
-    "tailwindcss": "^3.0.23",
     "typescript": "4.6.3"
   },
   "license": "ISC"

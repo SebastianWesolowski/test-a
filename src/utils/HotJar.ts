@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { hotjar } from 'react-hotjar';
 
-import config from '@/utils/config';
+import config from '@/config/config';
 
 const HotJar = (): null | JSX.Element => {
   useEffect(() => {

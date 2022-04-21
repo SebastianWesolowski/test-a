@@ -4,40 +4,10 @@ import {
   BsYoutube as YouTube,
 } from 'react-icons/bs';
 
-const title = 'Programista ForntEnd - Sebastian Wesołowski';
-const description =
-  'Jestem programistą 3 razy P. Mam ponad 6-letnie doświadczenie komercyjne, a wolny czas (którego nie mam) spędzam na medytacji w kuchennym fartuchu. W swojej karierze wcieliłem się już w rolę programisty';
-const locale = 'pl';
+import SEO from './configSEO';
 
 const UI = {
   theme: { palette: { primary: { main: '#fac846' } } },
-};
-const SEO = {
-  title,
-  description,
-  canonical: 'https://hr.wesolowski.dev',
-  locale,
-  openGraph: {
-    type: 'website',
-    locale,
-    url: 'https://hr.wesolowski.dev',
-    title,
-    description,
-    images: [
-      {
-        url: 'https://hr.wesolowski.dev/assets/image/openGraph.png',
-        alt: title,
-        width: 2240,
-        height: 1260,
-      },
-      {
-        url: 'https://hr.wesolowski.dev/assets/image/logo.png',
-        alt: 'Wesolowski.dev',
-        width: 300,
-        height: 300,
-      },
-    ],
-  },
 };
 
 const config = {

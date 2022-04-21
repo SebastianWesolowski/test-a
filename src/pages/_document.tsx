@@ -5,7 +5,7 @@
 /* eslint-disable max-classes-per-file */
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-import config from '@/utils/config';
+import config from '@/config/config';
 
 function dedupe<T extends { file: string }>(bundles: T[]): T[] {
   const files = new Set<string>();
