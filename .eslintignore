@@ -39,3 +39,6 @@ local
 # next-sitemap
 robots.txt
 sitemap.xml
+
+# reports
+/reports 
