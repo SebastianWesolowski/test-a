@@ -9,11 +9,11 @@ module.exports = {
   ],
   plugins: ['stylelint-scss', 'stylelint-no-unresolved-module', 'stylelint-no-unsupported-browser-features'],
   rules: {
-    'plugin/no-unresolved-module': true,
+    'plugin/no-unresolved-module': null,
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen'],
+        ignoreAtRules: ['tailwind', 'apply', 'layer', 'variants', 'responsive', 'screen'],
       },
     ],
     'declaration-block-trailing-semicolon': null,
@@ -21,7 +21,7 @@ module.exports = {
     'scss/at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['tailwind', 'apply', 'variants', 'responsive', 'screen'],
+        ignoreAtRules: ['tailwind', 'apply', 'layer', 'variants', 'responsive', 'screen'],
       },
     ],
     'plugin/no-unsupported-browser-features': [
