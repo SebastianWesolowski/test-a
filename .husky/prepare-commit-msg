@@ -1,8 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-"yarn git-cz --edit "$1""
+echo \[🐶 Husky] Running prepare-commit-msg hook...\
 
-exit 1
+yarn husky:prepare-commit-msg 
 
-# "exec < /dev/tty && git-cz-husky || true"
+echo \[🐶 Husky] Done ✅ prepare-commit-msg hook...\

@@ -2,6 +2,10 @@
   "name": "next-js-boilerplate",
   "version": "1.0.0",
   "scripts": {
+    "lint": "run-s format:check lint:parallel",
+    "format": "run-s format:check format:write",
+    "format:check": "prettier --check \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --json-recursive-sort",
+    "format:write": "prettier --write \"./**/*.+(js|jsx|ts|tsx|json)\" --ignore-unknown --json-recursive-sort",
     "dev": "run-s copy:assets next:dev",
     "start": "run-s build:prod next:start",
     "build": "run-s copy:assets next:build",
@@ -18,7 +22,11 @@
     "postbuild": "next-sitemap",
     "test:watch": "jest --watch",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "husky:prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+    "husky:pre-commit": "lint-staged",
+    "husky:pre-push": "run-s next:lint",
+    "husky:commit-msg": "commitlint --edit"
   },
   "dependencies": {
     "clsx": "^1.1.1",

@@ -1,6 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Disable concurent to run build-types after ESLint in lint-staged
-# npx lint-staged --concurrent false
-# exit 1
+echo \[🐶 Husky] Running pre-commit hook...\
+
+yarn husky:pre-commit
+# npx lint-staged
+
+echo \[🐶 Husky] Done ✅ pre-commit hook...\

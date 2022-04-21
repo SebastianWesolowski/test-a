@@ -1,7 +1,7 @@
 module.exports = {
   disableEmoji: false,
   format: '{type}{scope}: {emoji}{subject}',
-  list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf'],
+  list: ['test', 'feat', 'fix', 'chore', 'docs', 'refactor', 'style', 'ci', 'perf', 'breaking', 'config'],
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
@@ -9,7 +9,7 @@ module.exports = {
   types: {
     chore: {
       description: 'Build process or auxiliary tool changes',
-      emoji: '🤖',
+      emoji: '🔧',
       value: 'chore',
     },
     ci: {
@@ -19,12 +19,12 @@ module.exports = {
     },
     docs: {
       description: 'Documentation only changes',
-      emoji: '✏️',
+      emoji: '📚️',
       value: 'docs',
     },
     feat: {
       description: 'A new feature',
-      emoji: '🎸',
+      emoji: '✨',
       value: 'feat',
     },
     fix: {
@@ -39,23 +39,33 @@ module.exports = {
     },
     refactor: {
       description: 'A code change that neither fixes a bug or adds a feature',
-      emoji: '💡',
+      emoji: '♻️',
       value: 'refactor',
     },
     release: {
       description: 'Create a release commit',
-      emoji: '🏹',
+      emoji: '🚀',
       value: 'release',
     },
     style: {
       description: 'Markup, white-space, formatting, missing semi-colons...',
-      emoji: '💄',
+      emoji: '🎨',
       value: 'style',
     },
     test: {
       description: 'Adding missing tests',
-      emoji: '💍',
+      emoji: '🚨',
       value: 'test',
+    },
+    breaking: {
+      description: 'Introducing breaking changes.',
+      emoji: '💥',
+      value: 'breaking',
+    },
+    config: {
+      description: 'Changing configuration files.',
+      emoji: '⚙️',
+      value: 'config',
     },
   },
 };
