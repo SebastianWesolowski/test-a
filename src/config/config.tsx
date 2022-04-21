@@ -17,7 +17,7 @@ const config = {
     {
       icon: {
         normal: <Instagram />,
-        large: <Instagram size="100%" />,
+        large: <Instagram size='100%' />,
       },
       name: 'Instagram',
       url: 'https://www.instagram.com/wesolowski.dev/',
@@ -25,7 +25,7 @@ const config = {
     {
       icon: {
         normal: <Facebook />,
-        large: <Facebook size="100%" />,
+        large: <Facebook size='100%' />,
       },
       name: 'Facebook',
       url: 'https://www.facebook.com/Wesolowskidev-105113151219138/',
@@ -33,7 +33,7 @@ const config = {
     {
       icon: {
         normal: <YouTube />,
-        large: <YouTube size="100%" />,
+        large: <YouTube size='100%' />,
       },
       name: 'YouTube',
       url: 'https://www.youtube.com/channel/UCCQS_dsZJDN_35AL7LBiMMA',

@@ -34,14 +34,11 @@ export const StyleContextWrapper: FC<PropsWithChildren<{}>> = ({ children }): JS
   const value = { space, flexDirection, breakpoint };
 
   useEffect(() => {
-    if (true) {
-      setFlexDirection('column');
-      setSpace(1);
-    }
-    if (true) {
-      setFlexDirection('row');
-      setSpace(3);
-    }
+    setFlexDirection('column');
+    setSpace(1);
+
+    setFlexDirection('row');
+    setSpace(3);
   }, []);
 
   return (

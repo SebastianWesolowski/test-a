@@ -55,17 +55,15 @@ class DeferNextScript extends NextScript {
       file.endsWith('.js')
     );
 
-    return [...normalScripts, ...lowPriorityScripts].map((file) => {
-      return (
-        <script
-          key={file}
-          src={`${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`}
-          nonce={this.props.nonce}
-          defer={!isDevelopment}
-          crossOrigin={this.props.crossOrigin || process.env.__NEXT_CROSS_ORIGIN}
-        />
-      );
-    });
+    return [...normalScripts, ...lowPriorityScripts].map((file) => (
+      <script
+        key={file}
+        src={`${assetPrefix}/_next/${encodeURI(file)}${devOnlyCacheBusterQueryString}`}
+        nonce={this.props.nonce}
+        defer={!isDevelopment}
+        crossOrigin={this.props.crossOrigin || process.env.__NEXT_CROSS_ORIGIN}
+      />
+    ));
   }
 }
 
@@ -74,71 +72,71 @@ export default class MyDocument extends Document {
     return (
       <Html lang={config.SEO.locale}>
         <Head>
-          <meta name="description" content={config.SEO.description} />
+          <meta name='description' content={config.SEO.description} />
 
-          <link rel="icon" href="/assets/favicon/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png" />
-          <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png" />
-          <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png" />
-          <link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png" />
+          <link rel='icon' href='/assets/favicon/favicon.ico' />
+          <link rel='apple-touch-icon' sizes='57x57' href='/assets/favicon/apple-icon-57x57.png' />
+          <link rel='apple-touch-icon' sizes='60x60' href='/assets/favicon/apple-icon-60x60.png' />
+          <link rel='apple-touch-icon' sizes='72x72' href='/assets/favicon/apple-icon-72x72.png' />
+          <link rel='apple-touch-icon' sizes='76x76' href='/assets/favicon/apple-icon-76x76.png' />
           <link
-            rel="apple-touch-icon"
-            sizes="114x114"
-            href="/assets/favicon/apple-icon-114x114.png"
+            rel='apple-touch-icon'
+            sizes='114x114'
+            href='/assets/favicon/apple-icon-114x114.png'
           />
           <link
-            rel="apple-touch-icon"
-            sizes="120x120"
-            href="/assets/favicon/apple-icon-120x120.png"
+            rel='apple-touch-icon'
+            sizes='120x120'
+            href='/assets/favicon/apple-icon-120x120.png'
           />
           <link
-            rel="apple-touch-icon"
-            sizes="144x144"
-            href="/assets/favicon/apple-icon-144x144.png"
+            rel='apple-touch-icon'
+            sizes='144x144'
+            href='/assets/favicon/apple-icon-144x144.png'
           />
           <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="/assets/favicon/apple-icon-152x152.png"
+            rel='apple-touch-icon'
+            sizes='152x152'
+            href='/assets/favicon/apple-icon-152x152.png'
           />
           <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/assets/favicon/apple-icon-180x180.png"
+            rel='apple-touch-icon'
+            sizes='180x180'
+            href='/assets/favicon/apple-icon-180x180.png'
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="192x192"
-            href="/assets/favicon/android-icon-192x192.png   "
+            rel='icon'
+            type='image/png'
+            sizes='192x192'
+            href='/assets/favicon/android-icon-192x192.png   '
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/assets/favicon/favicon-32x32.png"
+            rel='icon'
+            type='image/png'
+            sizes='32x32'
+            href='/assets/favicon/favicon-32x32.png'
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="96x96"
-            href="/assets/favicon/favicon-96x96.png"
+            rel='icon'
+            type='image/png'
+            sizes='96x96'
+            href='/assets/favicon/favicon-96x96.png'
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/assets/favicon/favicon-16x16.png"
+            rel='icon'
+            type='image/png'
+            sizes='16x16'
+            href='/assets/favicon/favicon-16x16.png'
           />
 
-          <link rel="manifest" href="/manifest.json" />
-          <meta name="msapplication-TileColor" content={config.UI.theme.palette.primary.main} />
-          <meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png" />
-          <meta name="theme-color" content={config.UI.theme.palette.primary.main} />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel='manifest' href='/manifest.json' />
+          <meta name='msapplication-TileColor' content={config.UI.theme.palette.primary.main} />
+          <meta name='msapplication-TileImage' content='/assets/favicon/ms-icon-144x144.png' />
+          <meta name='theme-color' content={config.UI.theme.palette.primary.main} />
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
-            rel="stylesheet"
+            href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'
+            rel='stylesheet'
           />
         </Head>
         <body>
