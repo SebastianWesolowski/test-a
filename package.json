@@ -16,23 +16,22 @@
     "analize": "cross-env ANALYZE=true npm run build",
     "build-types": "tsc --noEmit --pretty",
     "postbuild": "next-sitemap",
-    "prepare": "husky install",
     "test:watch": "jest --watch",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "clsx": "^1.1.1",
     "copyfiles": "^2.4.1",
     "next": "^12.1.4",
+    "next-seo": "^5.4.0",
     "react": "^17.0.2",
     "react-cool-dimensions": "^2.0.7",
     "react-dom": "^17.0.2",
     "react-hotjar": "^5.0.0",
-    "next-seo": "^5.4.0",
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "lodash": "^4.17.21",
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
     "@next/bundle-analyzer": "^12.1.4",
@@ -48,6 +47,7 @@
     "autoprefixer": "^10.4.4",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.7",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -60,9 +60,12 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-tailwindcss": "^3.5.0",
     "eslint-plugin-unused-imports": "^2.0.0",
+    "git-cz": "^4.8.0",
+    "git-cz-husky": "^0.1.1",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.7",
+    "lodash": "^4.17.21",
     "next-sitemap": "^2.5.20",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.12",
@@ -70,7 +73,13 @@
     "prettier-plugin-tailwindcss": "^0.1.10",
     "rimraf": "^3.0.2",
     "tailwindcss": "^3.0.24",
-    "typescript": "4.6.3"
+    "typescript": "4.6.3",
+    "unimported": "^1.19.1"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
 }

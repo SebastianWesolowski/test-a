@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+"yarn git-cz --edit "$1""
+
+exit 1
+
+# "exec < /dev/tty && git-cz-husky || true"

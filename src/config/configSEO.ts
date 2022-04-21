@@ -11,6 +11,7 @@ const SEO = {
     url: Basic.url.production,
     title: Basic.title,
     description: Basic.description,
+    site_name: Basic.title,
     images: [
       {
         url: 'https://hr.wesolowski.dev/assets/image/openGraph.png',
