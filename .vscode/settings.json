@@ -16,5 +16,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "css.validate": false
+  "css.validate": false,
+  "scss.validate": false
 }
