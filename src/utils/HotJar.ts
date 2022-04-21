@@ -10,5 +10,5 @@ const HotJar = (): null | JSX.Element => {
 
   return null;
 };
-
+// if using TypeScript with a baseUrl set to the root directory then you need the below for alias' to work
 export default HotJar;

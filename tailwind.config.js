@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 function withOpacityValue(variable) {
@@ -38,6 +38,7 @@ module.exports = {
         flicker: {
           '0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100%': {
             opacity: 0.99,
+            // eslint-disable-next-line max-len
             filter:
               'drop-shadow(0 0 1px rgba(252, 211, 77)) drop-shadow(0 0 15px rgba(245, 158, 11)) drop-shadow(0 0 1px rgba(252, 211, 77))',
           },
@@ -61,5 +62,6 @@ module.exports = {
       },
     },
   },
+  // eslint-disable-next-line import/no-extraneous-dependencies
   plugins: [require('@tailwindcss/forms')],
 };

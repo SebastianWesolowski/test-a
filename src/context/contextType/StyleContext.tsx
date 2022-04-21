@@ -19,9 +19,7 @@ export const StyleContext = createContext(defaultStyleContext);
 export const StyleContextWrapper: FC<PropsWithChildren<{}>> = ({ children }): JSX.Element => {
   const [space, setSpace] = useState<number>(0);
   const [breakpoint, setBreakpoint] = useState<TBreakpoints>('XS');
-  const [flexDirection, setFlexDirection] = useState<
-    'row' | 'row-reverse' | 'column' | 'column-reverse'
-  >('row');
+  const [flexDirection, setFlexDirection] = useState<'row' | 'row-reverse' | 'column' | 'column-reverse'>('row');
 
   const { currentBreakpoint, observe } = useDimensions({
     breakpoints: { XS: 0, SM: 320, MD: 480, LG: 640 },

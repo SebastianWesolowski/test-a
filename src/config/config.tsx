@@ -1,8 +1,4 @@
-import {
-  BsFacebook as Facebook,
-  BsInstagram as Instagram,
-  BsYoutube as YouTube,
-} from 'react-icons/bs';
+import { BsFacebook as Facebook, BsInstagram as Instagram, BsYoutube as YouTube } from 'react-icons/bs';
 
 import SEO from './configSEO';
 
