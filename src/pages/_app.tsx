@@ -1,17 +1,16 @@
-import loadable from '@loadable/component';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { DefaultSeo } from 'next-seo';
 
 import '@/styles/global.css';
 
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
+
 import config from '@/config/config';
 import { AppProvider } from '@/templates/AppProvider';
 import { GlobalContainer } from '@/templates/GlobalContainer';
-
-const HotJar = loadable(() => import('@/utils/HotJar'));
-const Header = loadable(() => import('@/components/Header'));
-const Footer = loadable(() => import('@/components/Footer'));
+import HotJar from '@/utils/HotJar';
 
 // Client-side cache, shared for the whole session of the user in the browser.
 
