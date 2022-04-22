@@ -1,19 +1,5 @@
 {
-  "ignoreUnimported": [
-    "src/assets/svg/Logo.tsx",
-    "src/layout/Meta.tsx",
-    "src/lib/clsxm.ts",
-    "src/lib/helper.ts"
-  ],
+  "ignoreUnimported": ["src/assets/svg/Logo.tsx", "src/lib/clsxm.ts", "src/lib/helper.ts"],
   "ignoreUnresolved": [],
-  "ignoreUnused": [
-    "@loadable/component",
-    "@types/loadable__component",
-    "clsx",
-    "copyfiles",
-    "next",
-    "react",
-    "react-dom",
-    "tailwind-merge"
-  ]
+  "ignoreUnused": ["clsx", "copyfiles", "next", "react", "react-dom", "tailwind-merge"]
 }

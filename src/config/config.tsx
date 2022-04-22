@@ -1,5 +1,6 @@
 import { BsFacebook as Facebook, BsInstagram as Instagram, BsYoutube as YouTube } from 'react-icons/bs';
 
+import Basic from './configBasic';
 import SEO from './configSEO';
 
 const UI = {
@@ -7,6 +8,7 @@ const UI = {
 };
 
 const config = {
+  url: Basic.url,
   SEO,
   UI,
   socialMedia: [
