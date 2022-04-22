@@ -46,6 +46,8 @@
     "husky:commit-msg": "commitlint --edit"
   },
   "dependencies": {
+    "@loadable/component": "^5.15.2",
+    "@types/loadable__component": "^5.13.4",
     "clsx": "^1.1.1",
     "copyfiles": "^2.4.1",
     "next": "^12.1.4",
