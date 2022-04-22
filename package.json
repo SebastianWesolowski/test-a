@@ -26,7 +26,7 @@
     "next:lint": "next lint --fix",
     "next:start": "next start",
     "clean": "rimraf .next out",
-    "copy:assets": "copyfiles -u 1 \"./src/assets/**/*.+(png|svg|jpg|jpeg|webp|mp4|pdf|ico|woff2)\" public",
+    "copy:assets": "copyfiles -u 1 \"./src/assets/**/*.+(png|svg|jpg|jpeg|webp|mp4|pdf|ico|woff2|webmanifest|xml)\" public",
     "analize": "cross-env ANALYZE=true npm run build",
     "typecheck": "tsc --noEmit --incremental false",
     "postbuild": "next-sitemap",

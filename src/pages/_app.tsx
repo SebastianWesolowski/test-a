@@ -2,9 +2,6 @@ import { AppProps } from 'next/app';
 
 import '@/styles/global.css';
 
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
-
 import { AppProvider } from '@/templates/AppProvider';
 import { GlobalContainer } from '@/templates/GlobalContainer';
 
@@ -16,9 +13,7 @@ const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
     <>
       <AppProvider>
         <GlobalContainer>
-          <Header />
           <AnyComponent {...pageProps} />
-          <Footer />
         </GlobalContainer>
       </AppProvider>
     </>

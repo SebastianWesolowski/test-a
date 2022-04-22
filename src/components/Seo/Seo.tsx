@@ -43,21 +43,17 @@ export default function Seo(props: SeoProps) {
     templateTitle: props.templateTitle,
   });
 
+  config.SEO.openGraph.url = `${config.url.production}${router.asPath}`;
+  config.SEO.canonical = `${config.url.production}${router.asPath}`;
+
   return (
     <>
       <Head>
-        <meta name='description' content={config.SEO.description} />
+        <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover' />
 
-        <link rel='manifest' href='/manifest.json' />
-        <meta name='msapplication-TileColor' content={config.UI.theme.palette.primary.main} />
-        <meta name='msapplication-TileImage' content='/assets/favicon/ms-icon-144x144.png' />
-        <meta name='theme-color' content={config.UI.theme.palette.primary.main} />
-        <meta name='viewport' content='initial-scale=1, width=device-width' />
-        <title>{config.SEO.title}</title>
+        <meta name='keywords' content={config.SEO.keywords} />
 
-        <meta content={config.SEO.description} name='description' />
-        <meta property='og:url' content={`${config.url.production}${router.asPath}`} />
-        <link rel='canonical' href={`${config.url.production}${router.asPath}`} />
+        {/* <meta property='og:url' content={`${config.url.production}${router.asPath}`} /> */}
 
         {/* Open Graph */}
         {/* <meta property='og:type' content={config.SEO.openGraph.type} />
@@ -80,12 +76,21 @@ export default function Seo(props: SeoProps) {
         )}
 
         {/* Favicons */}
-        {favicons.map((linkProps) => (
-          <link key={linkProps.href} {...linkProps} />
-        ))}
-        <meta name='msapplication-TileColor' content='#ffffff' />
-        <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
-        <meta name='theme-color' content='#ffffff' />
+        {favicons.map((linkProps) => {
+          if (linkProps.tag === 'link') {
+            return (
+              <link
+                key={linkProps.href}
+                rel={linkProps.rel}
+                sizes={linkProps.sizes}
+                href={linkProps.href}
+                type={linkProps.type}
+                color={linkProps.color}
+              />
+            );
+          }
+          return <meta key={linkProps.href} name={linkProps.name} content={linkProps.content} />;
+        })}
       </Head>
       <NextSeo {...config.SEO} additionalLinkTags={config.SEO.additionalLinkTags} />
     </>

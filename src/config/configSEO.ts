@@ -19,6 +19,8 @@ const SEO = {
   description: Basic.description,
   canonical: Basic.url.production,
   locale: Basic.locale,
+  keywords:
+    'Learn React, React Workshops, Testing JavaScript Training, React Training, Learn JavaScript, Learn TypeScript',
   twitter: {
     handle: '@handle',
     site: '@wesolowski',
