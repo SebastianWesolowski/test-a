@@ -9,8 +9,9 @@ editconfig =- <https://github.com/magicspon/spon.io/blob/master/.editorconfig>
 
 wesolowski workspace
 
-
 codegen.json ?
-https://github.com/jsontypedef/json-typedef-codegen
+<https://github.com/jsontypedef/json-typedef-codegen>
 
-https://swagger.io/tools/swagger-codegen/
+<https://swagger.io/tools/swagger-codegen/>
+
+i18n

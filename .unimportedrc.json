@@ -7,6 +7,7 @@
   ],
   "ignoreUnresolved": [],
   "ignoreUnused": [
+    "@types/loadable__component",
     "clsx",
     "copyfiles",
     "next",
