@@ -6,7 +6,6 @@
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
 
 import config from '@/config/config';
-import HotJar from '@/utils/HotJar';
 
 function dedupe<T extends { file: string }>(bundles: T[]): T[] {
   const files = new Set<string>();
@@ -87,7 +86,6 @@ export default class MyDocument extends Document {
             crossOrigin='anonymous'
           />
         </Head>
-        <HotJar />
         <body>
           <Main />
           <DeferNextScript />

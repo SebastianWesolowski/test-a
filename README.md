@@ -19,3 +19,8 @@ i18n
 
 ---
 fill /Users/Sebastian/web/test-a/.github/FUNDING.yml
+
+minification all element in public
+
+
+sprawdzić do robi i jak połączyć socket z tailwind-nextjs-starter-blog

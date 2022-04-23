@@ -1,5 +1,6 @@
 import { BsFacebook as Facebook, BsInstagram as Instagram, BsYoutube as YouTube } from 'react-icons/bs';
 
+import analytics from './configAnalytics';
 import Basic from './configBasic';
 import SEO from './configSEO';
 
@@ -12,6 +13,7 @@ const config = {
   url: Basic.url,
   SEO,
   UI,
+  analytics,
   socialMedia: [
     {
       icon: {
@@ -47,10 +49,6 @@ const config = {
     },
     marketingApprovals:
       "Zgadzam się na przetwarzanie moich danych osobowych przez Sebastiana Wesołowskiego w celu realizacji usługi newsletter, a tym samym wysyłania mi informacji o produktach blogowych, usługach, promocjach lub nowościach zgodnie z <a href=''>polityką prywatności</a>. Wiem, że zgodę tę mogę w każdej chwili cofnąć. *",
-  },
-  hotJar: {
-    hjid: 2888639,
-    hjsv: 6,
   },
 };
 
