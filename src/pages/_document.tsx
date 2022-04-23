@@ -81,7 +81,7 @@ export default class MyDocument extends Document {
           />
           <link
             rel='preload'
-            href='/assets/fonts/Inter-Regular.woff2'
+            href='/assets/fonts/inter-var-latin.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'
