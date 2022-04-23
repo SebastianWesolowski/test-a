@@ -8,6 +8,7 @@ const UI = {
 };
 
 const config = {
+  theme: 'system', // system, dark or light
   url: Basic.url,
   SEO,
   UI,

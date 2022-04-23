@@ -15,3 +15,7 @@ codegen.json ?
 <https://swagger.io/tools/swagger-codegen/>
 
 i18n
+
+
+---
+fill /Users/Sebastian/web/test-a/.github/FUNDING.yml

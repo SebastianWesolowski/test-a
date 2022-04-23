@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 
 import '@/styles/global.css';
+import '@/styles/prism-a11y-dark.css';
 
 import { AppProvider } from '@/templates/AppProvider';
 import { GlobalContainer } from '@/templates/GlobalContainer';

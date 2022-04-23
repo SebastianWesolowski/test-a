@@ -7,4 +7,5 @@ export type Favicons = {
   content?: string;
   name?: string;
   tag: string;
+  key: number;
 };

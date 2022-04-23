@@ -2,24 +2,24 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { NextSeo } from 'next-seo';
 
-import { openGraph } from '@/lib/helper';
-
 import config from '@/config/config';
 
 import { favicons } from './favicons';
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: 'Next.js + Tailwind CSS + TypeScript Starter',
-  siteName: 'Next.js + Tailwind CSS + TypeScript Starter',
-  description:
-    'A starter for Next.js, Tailwind CSS, and TypeScript with Absolute Import, Seo, Link component, pre-configured with Husky',
-  /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
-  url: 'https://tsnext-tw.thcl.dev',
-  type: 'website',
-  robots: 'follow, index',
-  /** No need to be filled, will be populated with openGraph function */
-  image: '',
+  title: config.SEO.title,
+  siteName: config.SEO.siteName,
+  description: config.SEO.description,
+  url: config.url.production,
+  type: config.SEO.type,
+  robots: config.SEO.robots,
+  image: config.SEO.image,
+  locale: config.SEO.locale,
+  canonical: config.url.production,
+  keywords: config.SEO.keywords,
+  additionalLinkTags: config.SEO.additionalLinkTags,
+  twitter: config.SEO.twitter,
 };
 
 type SeoProps = {
@@ -29,44 +29,45 @@ type SeoProps = {
 
 export default function Seo(props: SeoProps) {
   const router = useRouter();
+  const currentUrl = `${config.url.production}${router.asPath}`;
   const meta = {
     ...defaultMeta,
     ...props,
   };
-  config.SEO.title = props.templateTitle ? `${props.templateTitle} | ${config.SEO.siteName}` : config.SEO.title;
+  meta.canonical = currentUrl;
+  meta.title = props.templateTitle ? `${props.templateTitle} | ${meta.siteName}` : meta.title;
 
-  // Use siteName if there is templateTitle
-  // but show full title if there is none
-  meta.image = openGraph({
-    description: config.SEO.description,
-    siteName: props.templateTitle ? config.SEO.siteName : config.SEO.title,
-    templateTitle: props.templateTitle,
-  });
+  const openGraph = {
+    type: meta.type,
+    locale: meta.locale,
+    url: meta.url,
+    title: meta.title,
+    description: meta.description,
+    site_name: meta.title,
+    images: [
+      {
+        url: meta.image.first,
+        alt: meta.title,
+        width: 2240,
+        height: 1260,
+      },
+      {
+        url: meta.image.second,
+        alt: meta.title,
+        width: 300,
+        height: 300,
+      },
+    ],
+  };
 
-  config.SEO.openGraph.url = `${config.url.production}${router.asPath}`;
-  config.SEO.canonical = `${config.url.production}${router.asPath}`;
+  const nextSeoConfig = { ...defaultMeta, openGraph };
 
   return (
     <>
       <Head>
         <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover' />
-
-        <meta name='keywords' content={config.SEO.keywords} />
-
-        {/* <meta property='og:url' content={`${config.url.production}${router.asPath}`} /> */}
-
-        {/* Open Graph */}
-        {/* <meta property='og:type' content={config.SEO.openGraph.type} />
-      <meta property='og:site_name' content={config.SEO.openGraph.siteName} />
-      <meta property='og:description' content={config.SEO.openGraph.description} />
-      <meta property='og:title' content={config.SEO.openGraph.title} />
-      <meta name='image' property='og:image' content={config.SEO.openGraph.images[0]} /> */}
-        {/* Twitter */}
-        {/* <meta name='twitter:card' content={config.SEO.twitterCard.card} />
-      <meta name='twitter:site' content={config.SEO.twitterCard.site} />
-      <meta name='twitter:title' content={config.SEO.twitterCard.title} />
-      <meta name='twitter:description' content={config.SEO.twitterCard.description} />
-      <meta name='twitter:image' content={config.SEO.twitterCard.image} /> */}
+        <meta name='keywords' content={meta.keywords} />
+        <meta name='twitter:alt' content={meta.title} />
         {meta.date && (
           <>
             <meta property='article:published_time' content={meta.date} />
@@ -80,7 +81,7 @@ export default function Seo(props: SeoProps) {
           if (linkProps.tag === 'link') {
             return (
               <link
-                key={linkProps.href}
+                key={linkProps.key}
                 rel={linkProps.rel}
                 sizes={linkProps.sizes}
                 href={linkProps.href}
@@ -89,51 +90,10 @@ export default function Seo(props: SeoProps) {
               />
             );
           }
-          return <meta key={linkProps.href} name={linkProps.name} content={linkProps.content} />;
+          return <meta key={linkProps.key} name={linkProps.name} content={linkProps.content} />;
         })}
       </Head>
-      <NextSeo {...config.SEO} additionalLinkTags={config.SEO.additionalLinkTags} />
+      <NextSeo {...nextSeoConfig} />
     </>
   );
 }
-
-// import Head from 'next/head';
-// import { useRouter } from 'next/router';
-// import { NextSeo } from 'next-seo';
-
-// type IMetaProps = {
-//   title: string;
-//   description: string;
-//   canonical?: string;
-// };
-
-// const Meta = (props: IMetaProps) => {
-//   const router = useRouter();
-
-//   return (
-//     <>
-//       <Head>
-//         <meta charSet='UTF-8' key='charset' />
-//         <meta name='viewport' content='width=device-width,initial-scale=1' key='viewport' />
-//         <link rel='apple-touch-icon' href={`${router.basePath}/apple-touch-icon.png`} key='apple' />
-//         <link rel='icon' type='image/png' sizes='32x32' href={`${router.basePath}/favicon-32x32.png`} key='icon32' />
-//         <link rel='icon' type='image/png' sizes='16x16' href={`${router.basePath}/favicon-16x16.png`} key='icon16' />
-//         <link rel='icon' href={`${router.basePath}/favicon.ico`} key='favicon' />
-//       </Head>
-//       <NextSeo
-//         title={props.title}
-//         description={props.description}
-//         canonical={props.canonical}
-//         openGraph={{
-//           title: props.title,
-//           description: props.description,
-//           url: props.canonical,
-//           // locale: AppConfig.locale,
-//           // site_name: AppConfig.site_name,
-//         }}
-//       />
-//     </>
-//   );
-// };
-
-// export { Meta };

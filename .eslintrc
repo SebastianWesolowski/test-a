@@ -1,6 +1,8 @@
 {
+  "root": true,
   "env": {
     "browser": true,
+    "amd": true,
     "es2021": true,
     "node": true
   },
@@ -8,6 +10,8 @@
   "plugins": ["unused-imports", "jsx-a11y"],
   "extends": [
     "airbnb-base",
+    "eslint:recommended",
+    "next",
     "next/core-web-vitals",
     "plugin:jsx-a11y/recommended",
     "plugin:prettier/recommended",
