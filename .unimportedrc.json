@@ -1,10 +1,6 @@
 {
   "ignoreUnimported": [
     "src/assets/svg/Logo.tsx",
-    "src/component/Banan/Banan.stories.tsx",
-    "src/component/Banan/Banan.tsx",
-    "src/component/Banan/index.ts",
-    "src/component/Banan/types.ts",
     "src/lib/clsxm.ts"
   ],
   "ignoreUnresolved": [],
