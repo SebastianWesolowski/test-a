@@ -6,6 +6,8 @@ to: <%= absPath %>/README.md
 ## Usage
 
 ```tsx
+import { <%= component_name %> } from "@<%= category %>";
+// or
 import { <%= component_name %> } from "@<%= category %>/<%= component_name %>";
 
 <<%= component_name %> dummy={"lorem ipsum"}/>;

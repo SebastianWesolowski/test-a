@@ -4,4 +4,4 @@ to: src/components/index.ts
 append: true
 skip_if: react-native-fs
 ---
-export * from "./<%= category %>";
+export * from "./<%= component_name %>";

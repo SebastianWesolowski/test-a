@@ -4,7 +4,7 @@ import MinimalLogo from "@/assets/svg/MinimalLogo";
 import config from "@/config/config";
 import { StyleContext } from "@/context/contextType/StyleContext";
 
-const Header = (): JSX.Element => {
+export const Header = (): JSX.Element => {
   const { space } = useContext(StyleContext);
 
   return (
@@ -22,5 +22,3 @@ const Header = (): JSX.Element => {
     </>
   );
 };
-
-export default Header;

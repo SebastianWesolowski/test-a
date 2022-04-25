@@ -1,9 +1,9 @@
 ---
 to: <%= absPath %>/<%= component_name %>.tsx
 ---
-import { FC } from 'react';
+import { FC } from "react";
 
-import "./<%= component_name %>.module.scss";
+import styles from "./<%= component_name %>.module.scss";
 
 import { I<%= component_name %>Props } from "./types";
 

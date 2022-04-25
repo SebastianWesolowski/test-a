@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import { Seo } from "@/components/Seo";
+import { Seo } from "@/components";
 
 import { StyleContext } from "@/context/contextType/StyleContext";
 import { Layout } from "@/layout/Layout";
