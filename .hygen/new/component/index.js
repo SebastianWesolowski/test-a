@@ -2,15 +2,15 @@ module.exports = {
   prompt: ({ inquirer }) => {
     const questions = [
       {
-        type: 'select',
-        name: 'category',
-        message: 'Which type component?',
-        choices: ['component', 'layout', 'pages', 'layout', 'utils'],
+        type: "select",
+        name: "category",
+        message: "Which type component?",
+        choices: ["component", "layout", "pages", "layout", "utils"],
       },
       {
-        type: 'input',
-        name: 'component_name',
-        message: 'What is the component name?',
+        type: "input",
+        name: "component_name",
+        message: "What is the component name?",
       },
     ];
     return inquirer.prompt(questions).then((answers) => {

@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+import * as React from "react";
+import { RiAlarmWarningFill } from "react-icons/ri";
 
-import Seo from '@/components/Seo/Seo';
+import { Seo } from "@/components/Seo";
 
-import { Layout } from '@/layout/Layout';
+import { Layout } from "@/layout/Layout";
 
 export default function NotFoundPage() {
   return (

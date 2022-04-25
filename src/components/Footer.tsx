@@ -1,5 +1,5 @@
-import config from '@/config/config';
-import { ISocialMedia } from '@/config/type';
+import config from "@/config/config";
+import { ISocialMedia } from "@/config/type";
 
 const Footer = (): JSX.Element => (
   <footer
@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => (
   >
     <div className='flex h-auto flex-row justify-center p-3'>
       {config.socialMedia.map((item: ISocialMedia) => (
-        <div className='h-12 w-12 px-3' key={item.name} style={{ color: '#000000' }}>
+        <div className='h-12 w-12 px-3' key={item.name} style={{ color: "#000000" }}>
           {item.icon.large}
         </div>
       ))}

@@ -1,7 +1,7 @@
 ---
 inject: true
-to: src/index.ts
+to: src/components/index.ts
 append: true
 skip_if: react-native-fs
 ---
-export * from "./components/<%= category %>/<%= component_name %>";
+export * from "./<%= category %>";

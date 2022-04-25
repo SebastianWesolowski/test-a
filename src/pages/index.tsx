@@ -1,9 +1,9 @@
-import { useContext } from 'react';
+import { useContext } from "react";
 
-import Seo from '@/components/Seo/Seo';
+import { Seo } from "@/components/Seo";
 
-import { StyleContext } from '@/context/contextType/StyleContext';
-import { Layout } from '@/layout/Layout';
+import { StyleContext } from "@/context/contextType/StyleContext";
+import { Layout } from "@/layout/Layout";
 
 const Homepage = (): JSX.Element => {
   const { space } = useContext(StyleContext);

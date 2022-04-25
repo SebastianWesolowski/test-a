@@ -1,6 +1,6 @@
-import Script from 'next/script';
+import Script from "next/script";
 
-import config from '@/config/config';
+import config from "@/config/config";
 
 const UmamiScript = () => {
   return (

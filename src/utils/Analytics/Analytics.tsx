@@ -1,10 +1,10 @@
-import config from '@/config/config';
+import config from "@/config/config";
 
-import GoogleAnalytics from './components/GoogleAnalytics';
-import HotJar from './components/HotJar';
-import Umami from './components/Umami';
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import HotJar from "./components/HotJar";
+import Umami from "./components/Umami";
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === "production";
 
 const Analytics = () => {
   return (

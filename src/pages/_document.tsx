@@ -3,9 +3,9 @@
 /* eslint-disable no-continue */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable max-classes-per-file */
-import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import Document, { DocumentContext, Head, Html, Main, NextScript } from "next/document";
 
-import config from '@/config/config';
+import config from "@/config/config";
 
 function dedupe<T extends { file: string }>(bundles: T[]): T[] {
   const files = new Set<string>();
@@ -31,7 +31,7 @@ class DeferNextScript extends NextScript {
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return dedupe(dynamicImports as any).map((bundle) => {
-      if (!bundle.file.endsWith('.js') || files.allFiles.includes(bundle.file)) return null;
+      if (!bundle.file.endsWith(".js") || files.allFiles.includes(bundle.file)) return null;
 
       return (
         <script
@@ -48,8 +48,8 @@ class DeferNextScript extends NextScript {
   getScripts(files: DocumentFiles) {
     const { assetPrefix, buildManifest, isDevelopment, devOnlyCacheBusterQueryString } = this.context;
 
-    const normalScripts = files.allFiles.filter((file) => file.endsWith('.js'));
-    const lowPriorityScripts = buildManifest.lowPriorityFiles?.filter((file) => file.endsWith('.js'));
+    const normalScripts = files.allFiles.filter((file) => file.endsWith(".js"));
+    const lowPriorityScripts = buildManifest.lowPriorityFiles?.filter((file) => file.endsWith(".js"));
 
     return [...normalScripts, ...lowPriorityScripts].map((file) => (
       <script

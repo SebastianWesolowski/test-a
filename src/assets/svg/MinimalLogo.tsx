@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { SVGProps } from 'react';
+import * as React from "react";
+import { SVGProps } from "react";
 
 const MinimalLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
   <svg
@@ -9,7 +9,7 @@ const MinimalLogo = (props: SVGProps<SVGSVGElement>): JSX.Element => (
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
-    style={{ backgroundColor: '#fac846' }}
+    style={{ backgroundColor: "#fac846" }}
     {...props}
   >
     <path

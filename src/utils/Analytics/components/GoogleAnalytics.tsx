@@ -1,6 +1,6 @@
-import Script from 'next/script';
+import Script from "next/script";
 
-import config from '@/config/config';
+import config from "@/config/config";
 
 declare global {
   interface Window {
@@ -34,7 +34,7 @@ export default GAScript;
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 export const logEvent = (action: any, category: any, label: any, value: any) => {
-  window.gtag?.('event', action, {
+  window.gtag?.("event", action, {
     event_category: category,
     event_label: label,
     value,

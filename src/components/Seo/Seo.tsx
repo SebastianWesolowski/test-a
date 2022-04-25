@@ -1,10 +1,10 @@
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { NextSeo } from 'next-seo';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { NextSeo } from "next-seo";
 
-import config from '@/config/config';
+import config from "@/config/config";
 
-import { favicons } from './favicons';
+import { favicons } from "./favicons";
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
@@ -27,7 +27,7 @@ type SeoProps = {
   templateTitle?: string;
 } & Partial<typeof defaultMeta>;
 
-export default function Seo(props: SeoProps) {
+export const Seo = ({ ...props }: SeoProps): JSX.Element => {
   const router = useRouter();
   const currentUrl = `${config.url.production}${router.asPath}`;
   const meta = {
@@ -79,7 +79,7 @@ export default function Seo(props: SeoProps) {
 
         {/* Favicons */}
         {favicons.map((linkProps) => {
-          if (linkProps.tag === 'link') {
+          if (linkProps.tag === "link") {
             return (
               <link
                 key={linkProps.key}
@@ -97,4 +97,4 @@ export default function Seo(props: SeoProps) {
       <NextSeo {...nextSeoConfig} />
     </>
   );
-}
+};
