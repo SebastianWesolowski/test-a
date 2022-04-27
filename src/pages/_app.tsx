@@ -1,7 +1,6 @@
 import { AppProps } from "next/app";
 
-import { AppProvider } from "@/templates/AppProvider";
-import { GlobalContainer } from "@/templates/GlobalContainer";
+import { AppProvider, GlobalContainer } from "@/layout";
 import { Analytics } from "@/utils";
 
 import "@/styles/global.css";

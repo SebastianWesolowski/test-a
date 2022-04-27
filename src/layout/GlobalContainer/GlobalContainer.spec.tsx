@@ -1,11 +1,11 @@
 import renderer from "react-test-renderer";
 import "@testing-library/jest-dom";
 
-import { BasicLayout } from ".";
+import { GlobalContainer } from ".";
 
 describe("Components", () => {
-  describe("BasicLayout", () => {
-    const component = renderer.create(<BasicLayout />);
+  describe("GlobalContainer", () => {
+    const component = renderer.create(<GlobalContainer />);
     const tree = component.toJSON();
 
     it("should render without errors", () => {
