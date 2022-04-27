@@ -11,6 +11,7 @@
   "extends": [
     "airbnb-base",
     "eslint:recommended",
+    "plugin:import/recommended",
     "next",
     "next/core-web-vitals",
     "plugin:jsx-a11y/recommended",
@@ -56,6 +57,7 @@
         "next",
         "next/core-web-vitals",
         "plugin:tailwindcss/recommended",
+        "plugin:import/recommended",
         "airbnb-typescript",
         "plugin:prettier/recommended",
         "prettier"
@@ -93,8 +95,6 @@
             "groups": [
               // ext library & side effect imports
               ["^@?\\w", "^\\u0000"],
-              // {s}css files
-              ["^.+\\.s?css$"],
               // Lib and hooks
               ["^@/lib", "^@/hooks"],
               // static data
@@ -105,6 +105,8 @@
               ["^@/store"],
               // Other imports
               ["^@/"],
+              // {s}css files
+              ["^.+\\.s?css$"],
               // relative paths up until 3 level
               [
                 "^\\./?$",

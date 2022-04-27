@@ -8,11 +8,11 @@ import { <%= component_name %> } from ".";
 
 describe("Components", () => {
   describe("<%= component_name %>", () => {
-    const propss = {
+    const props = {
       dummy: "test",
     };
 
-    const component = renderer.create(<<%= component_name %> {...propss} />);
+    const component = renderer.create(<<%= component_name %> {...props} />);
     const tree = component.toJSON();
  
     it("should render without errors", () => {

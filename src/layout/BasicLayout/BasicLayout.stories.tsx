@@ -1,14 +1,12 @@
----
-to: <%= absPath %>/<%= component_name %>.stories.tsx
----
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { <%= component_name %> } from "./<%= component_name %>";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import { BasicLayout } from "./BasicLayout";
 import README from "./README.md";
 
 // // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "<%= category %>/<%= component_name %>",
-  component: <%= component_name %>,
+  title: "layout/BasicLayout",
+  component: BasicLayout,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: "color" },
@@ -31,12 +29,10 @@ export default {
       sidebar: README,
     },
   },
-} as ComponentMeta<typeof <%= component_name %>>;
+} as ComponentMeta<typeof BasicLayout>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof <%= component_name %>> = (args) => (
-  <<%= component_name %> {...args} />
-);
+const Template: ComponentStory<typeof BasicLayout> = (args) => <BasicLayout {...args} />;
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args

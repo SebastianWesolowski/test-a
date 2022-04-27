@@ -1,13 +1,12 @@
-import * as React from "react";
 import { RiAlarmWarningFill } from "react-icons/ri";
 
 import { Seo } from "@/components";
 
-import { Layout } from "@/layout/Layout";
+import { BasicLayout } from "@/layout";
 
 export default function NotFoundPage() {
   return (
-    <Layout>
+    <BasicLayout>
       <Seo templateTitle='Not Found' />
 
       <main>
@@ -21,6 +20,6 @@ export default function NotFoundPage() {
           </div>
         </section>
       </main>
-    </Layout>
+    </BasicLayout>
   );
 }

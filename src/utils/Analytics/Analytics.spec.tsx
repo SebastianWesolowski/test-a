@@ -1,18 +1,15 @@
----
-to: <%= absPath %>/<%= component_name %>.spec.tsx
----
 import renderer from "react-test-renderer";
 import "@testing-library/jest-dom";
 
-import { <%= component_name %> } from ".";
+import { Analytics } from ".";
 
 describe("Components", () => {
-  describe("<%= component_name %>", () => {
-    const propss = {
+  describe("Analytics", () => {
+    const props = {
       dummy: "test",
     };
 
-    const component = renderer.create(<<%= component_name %> {...propss} />);
+    const component = renderer.create(<Analytics {...props} />);
     const tree = component.toJSON();
  
     it("should render without errors", () => {

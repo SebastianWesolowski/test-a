@@ -44,7 +44,7 @@
     "husky:pre-commit": "lint-staged -c ./.husky/lint-staged.config.json",
     "husky:pre-push": "run-s lint quality:check:* build",
     "husky:commit-msg": "commitlint --edit",
-    "new": "❯ hygen component components"
+    "new": "hygen new component"
   },
   "dependencies": {
     "clsx": "^1.1.1",

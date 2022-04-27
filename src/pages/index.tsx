@@ -3,13 +3,13 @@ import { useContext } from "react";
 import { Seo } from "@/components";
 
 import { StyleContext } from "@/context/contextType/StyleContext";
-import { Layout } from "@/layout/Layout";
+import { BasicLayout } from "@/layout";
 
 const Homepage = (): JSX.Element => {
   const { space } = useContext(StyleContext);
 
   return (
-    <Layout>
+    <BasicLayout>
       <Seo />
       <main>
         <div className='container mx-auto my-2 sm:my-4' style={{ paddingBottom: `${space}px` }}>
@@ -21,7 +21,7 @@ const Homepage = (): JSX.Element => {
           </div>
         </div>
       </main>
-    </Layout>
+    </BasicLayout>
   );
 };
 

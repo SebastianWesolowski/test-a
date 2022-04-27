@@ -12,34 +12,35 @@ module.exports = {
         name: "component_name",
         message: "What is the component name?",
       },
+      {
+        type: "confirm",
+        name: "children",
+        message: "Do you want to have children ?",
+      },
+      {
+        type: "confirm",
+        name: "style",
+        message: "Do you want to have custom style ?",
+      },
     ];
     return inquirer.prompt(questions).then((answers) => {
-      const childrenAllow = ["layout", "pages"];
-      const indexAllow = ["components", "layout", "utils"];
       answers.component_name = answers.component_name.charAt(0).toUpperCase() + answers.component_name.slice(1);
 
-      const { category, component_name } = answers;
-
+      const { category, children, style, component_name } = answers;
+      const lo_component_name = answers.component_name.charAt(0).toLowerCase() + answers.component_name.slice(1);
       const path = `${category}/${component_name}`;
-      const absPath = `src/${path}`;
-      let children = false;
+      let absPath = `src/${path}`;
+
+      if (category === "pages") {
+        absPath = `src/${category}/${lo_component_name}`;
+      }
       let addIndex = false;
-      let addIndexPath = null;
-
-      if (childrenAllow.some((element) => element === category)) {
-        children = true;
-      }
-
-      if (indexAllow.some((element) => element === category)) {
-        addIndex = true;
-        addIndexPath = `${absPath}/index.ts`;
-      }
 
       console.log(
         "🚀 ~ file: index.js ~ line 39 ~ returninquirer.prompt ~ { ...answers, addIndex, children, path, absPath, category }",
-        { ...answers, addIndex, children, path, absPath, category }
+        { ...answers, addIndex, children, style, path, absPath, lo_component_name, category }
       );
-      return { ...answers, addIndex, addIndexPath, children, path, absPath, category };
+      return { ...answers, addIndex, children, style, path, absPath, lo_component_name, category };
     });
   },
 };

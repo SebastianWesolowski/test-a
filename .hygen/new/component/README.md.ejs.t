@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/README.md
+to: "<%= category === 'pages' ? null : `${absPath}/README.md` %>"
 ---
 # <%= component_name %>
 

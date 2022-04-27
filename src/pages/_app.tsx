@@ -1,11 +1,11 @@
 import { AppProps } from "next/app";
 
-import "@/styles/global.css";
-import "@/styles/prism-a11y-dark.css";
-
 import { AppProvider } from "@/templates/AppProvider";
 import { GlobalContainer } from "@/templates/GlobalContainer";
-import Analytics from "@/utils/Analytics/Analytics";
+import { Analytics } from "@/utils";
+
+import "@/styles/global.css";
+import "@/styles/prism-a11y-dark.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 
