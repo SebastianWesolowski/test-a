@@ -5,13 +5,9 @@ import { Analytics } from ".";
 
 describe("Components", () => {
   describe("Analytics", () => {
-    const props = {
-      dummy: "test",
-    };
-
-    const component = renderer.create(<Analytics {...props} />);
+    const component = renderer.create(<Analytics />);
     const tree = component.toJSON();
- 
+
     it("should render without errors", () => {
       expect(tree).toMatchSnapshot();
     });

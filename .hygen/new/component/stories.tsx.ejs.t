@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/<%= component_name %>.stories.tsx
+to: null
 ---
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { <%= component_name %> } from "./<%= component_name %>";
